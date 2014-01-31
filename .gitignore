@@ -16,3 +16,6 @@ tags
 
 ## rspec settings
 .rspec
+
+##
+pkg/*
