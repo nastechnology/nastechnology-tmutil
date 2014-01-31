@@ -31,17 +31,18 @@ class tmutil (
   $user     = '',
   $password = '',
   $server   = '',
+  $share    = 'TimeMachines'
 ){
 
   $tmutil = '/usr/bin/tmutil'
-  $fullservers = "afp://${user}:${password}@${server}/TimeMachines"
+  $fullserver = "afp://${user}:${password}@${server}/${share}"
 
   exec { 'EnableTmutil':
     command => '/usr/bin/tmutil enable',
   }
 
   exec { "Set${user}BackupDestination":
-    command => "${tmutil} setdestination ${fullservers}",
+    command => "${tmutil} setdestination ${fullserver}",
     require => Exec['EnableTmutil'],
   }
 

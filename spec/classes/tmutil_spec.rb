@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'tmutil' do
-  let(:params) { {:user =>'User1', :password => 'test', :server => 'xserve.example.com' } }
+  let(:params) { {:user =>'User1', :password => 'test', :server => 'xserve.example.com', :share => 'TimeMachines' } }
 
   it 'enable tmutil' do 
   	should contain_exec('EnableTmutil').only_with_command("/usr/bin/tmutil enable")

@@ -19,7 +19,7 @@
 # Copyright 2014 Napoleon Area City Schools, unless otherwise noted.
 #
 define tmutil::exclude {
-  exec { 'TmutilExclude':
+  exec { "TmutilExclude${name}":
     command => "/usr/bin/tmutil addexclusion ${name}",
   }
 }
