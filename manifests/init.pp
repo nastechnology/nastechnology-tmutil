@@ -38,7 +38,7 @@ class tmutil (
   $fullserver = "afp://${user}:${password}@${server}/${share}"
 
   exec { 'EnableTmutil':
-    command => '/usr/bin/tmutil enable',
+    command => "${tmutil} enable",
   }
 
   exec { "Set${user}BackupDestination":

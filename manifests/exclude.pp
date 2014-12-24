@@ -19,8 +19,10 @@
 # Copyright 2014 Napoleon Area City Schools, unless otherwise noted.
 #
 define tmutil::exclude {
+  $tmutil = '/usr/bin/tmutil'
+
   exec { "TmutilExclude${name}":
-    command => "/usr/bin/tmutil addexclusion ${name}",
-    unless  => "/usr/bin/tmutil isexcluded ${name} | if [ `grep -c [Excluded].*${name}` == 1 ]; then exit 0; fi;"
+    command => "${tmutil} addexclusion ${name}",
+    unless  => "${tmutil} isexcluded ${name} | if [ `grep -c [Excluded].*${name}` == 1 ]; then exit 0; fi;"
   }
 }

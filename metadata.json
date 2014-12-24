@@ -1,0 +1,23 @@
+{
+  "name": "nastechnology-tmutil",
+  "version": "1.0.0",
+  "author": "marcusmyers",
+  "summary": "Module to manage TimeMachine Backups for the Mac",
+  "license": "Apache 2.0",
+  "source": "https://github.com/nastechnology/nastechnology-tmutil",
+  "project_page": "https://github.com/nastechnology/nastechnology-tmutil",
+  "issues_url": "https://github.com/nastechnology/nastechnology-tmutil/issues",
+  "tags": ["timemachine", "osx", "apple", "backup", "mac"],
+  "operatingsystem_support": [
+    {
+      "operatingsystem":"Darwin",
+      "operatingsystemrelease":[ "10.9", "10.10" ]
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ]
+}
